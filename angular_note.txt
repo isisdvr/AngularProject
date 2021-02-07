@@ -1,0 +1,29 @@
+ver @1.1.0
+npm install -g @angular/cli
+ npm i firebase angularfire2 --save
+ AngularFire has moved, we're now @angular/fire
+
+mosh angular ver
+@angular --> 4.0.0
+
+npm i bootstrap@3.3.7 --save
+
+Shadow Dom
+Allows us to apply scoped styles to elements without bleeding out to the outer world.
+
+use animation
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+BrowserAnimationsModule in imports ---> module.ts
+import 'web-animations-js'; in polyfills.ts
+npm install web-animations-js@2.2.5 --save
+
+component 
+animations: [
+    trigger('fade', [
+        state(),
+        transition('void=>*', [
+            style({backgroundColor: 'yellow', opacity:0}),
+            animate(2000, style({backgroundColor: 'white', opacity:1}))
+        ])  --> import animation
+    ])    import {trigger} from '@angular/animations';
+]

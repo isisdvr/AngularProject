@@ -1,0 +1,14 @@
+<h2>Section four</h2>
+<p>Template variable</p>
+<input #email (keyup.enter)="onKeyUp(email.value)" >
+
+<p>Two way binding</p>
+<p>have to import FormsModule to use two way binding</p>
+<input [(ngModel)]="myemail"  (keyup.enter)="onKeyUp2()" autofocus >
+<!-- <input [value]="myemail"  (keyup.enter)="myemail=$event.target.value; onKeyUp2()"> -->
+<!-- var el =document.querySelector('favorite') -->
+<!-- var root = el.createShadowRoot() -->
+<!-- el.innerHtml="<style>h1 {color:red}</style><h1>Hello</h1>" -->
+<!-- root.innerHtml="<style>h1 {color:red}</style><h1>Hello</h1>" -->
+
+

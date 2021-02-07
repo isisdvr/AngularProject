@@ -1,0 +1,17 @@
+<h1>This is api page</h1>
+<span
+  class="glyphicon"
+  [class.glyphicon-star]="isSelected"
+  [class.glyphicon-star-empty]="!isSelected"
+  (click)="onClick()"
+></span>
+
+<button>Click me</button>
+
+<span
+  class="glyphicon2"
+  [ngClass]="{
+    'glyphicon-star': isSelected,
+    'glyphicon-star-empty': !isSelected
+  }"
+></span>

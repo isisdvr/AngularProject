@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyCrMAl3buEdSRkx9PQDZib_XxLwbHLhy-s",
+    authDomain: "ninja-firegram-d391e.firebaseapp.com",
+    projectId: "ninja-firegram-d391e",
+    storageBucket: "ninja-firegram-d391e.appspot.com",
+    messagingSenderId: "709031779683",
+    appId: "1:709031779683:web:9372421a76edd8a17ec756",
+  },
 };
 
 /*

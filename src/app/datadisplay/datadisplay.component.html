@@ -1,0 +1,12 @@
+<h1>{{ title }}</h1>
+<app-panel>   <!--selector que esta definido en panel.ts-->
+  <ng-container class="heading">My Heading</ng-container>
+  <div class="body">
+    <h2>Body</h2>
+    <p>Some content here...</p>
+  </div>
+</app-panel>
+<app-apis [item]="currentItem" (change)="onFavoriteChanged($event)"></app-apis>
+
+<div [hidden]="courses?.length == 0">List of Courses</div>
+<div [hidden]="courses?.length > 0">No courses yet</div>

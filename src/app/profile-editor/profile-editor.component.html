@@ -1,0 +1,96 @@
+<div class="wrapper">
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>
+        Last Name:
+        <input type="text" formControlName="lastName" />
+      </label>
+    </div>
+    <div formGroupName="address">
+      <div>
+        <label>
+          Street:
+          <input type="text" formControlName="street" />
+        </label>
+      </div>
+      <div>
+        <label>
+          City:
+          <input type="text" formControlName="city" />
+        </label>
+      </div>
+      <div>
+        <label>
+          State:
+          <input type="text" formControlName="state" />
+        </label>
+      </div>
+      <div>
+        <label>
+          Zip Code:
+          <input type="text" formControlName="zip" />
+        </label>
+      </div>
+    </div>
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+  </form>
+</div>
+<p>
+  <button (click)="updateProfile()">Update Profile Using patchValue</button>
+</p>
+<p>
+  <button (click)="updateIndividualControl()">Update using SetValue</button>
+</p>
+<br />
+<hr />
+
+<div class="wrapper">
+  <form [formGroup]="profileFormBuilder" (ngSubmit)="onSubmit2()">
+    <div>
+      <label>
+        First Name:
+        <input type="text" formControlName="firstNameBuilder" required />
+      </label>
+    </div>
+    <div>
+      <label>
+        Last Name:
+        <input type="text" formControlName="lastNameBuilder" />
+      </label>
+    </div>
+    <div formGroupName="addressBuilder">
+      <div>
+        <label>
+          Street:
+          <input type="text" formControlName="streetBuilder" />
+        </label>
+      </div>
+      <div>
+        <label>
+          City:
+          <input type="text" formControlName="cityBuilder" />
+        </label>
+      </div>
+      <div>
+        <label>
+          State:
+          <input type="text" formControlName="stateBuilder" />
+        </label>
+      </div>
+      <div>
+        <label> Zip Code: 
+        <input type="text" formControlName="zipBuilder" />
+      </label>
+      </div>
+    </div>
+    <div> <button type="submit" [disabled]="!profileFormBuilder.valid">Submit</button></div>
+   
+  </form>
+  <p>
+    <button (click)="updateProfile2()">Update Profile Using patchValue</button>
+  </p>
+  <p>
+    <button (click)="updateIndividualControl2()">Update using SetValue</button>
+  </p>
+</div>
+<p>Form Status: {{ profileFormBuilder.status }}</p>
